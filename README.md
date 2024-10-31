@@ -10,11 +10,11 @@ Este proyecto es una aplicación frontend desarrollada en React que facilita la 
 ## Instalación
 1. Clona el repositorio:
     ```bash
-    git clone https://github.com/tu-usuario/tu-repositorio.git
+    git clone https://github.com/AriasCamilaA/hackaton-mujeres-digitales.git
     ```
 2. Navega al directorio del proyecto:
     ```bash
-    cd tu-repositorio
+    cd hackaton-mujeres-digitales
     ```
 3. Instala las dependencias:
     ```bash

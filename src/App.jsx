@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import Posts from './components/Posts';
 import './App.css';
 
 function App() {
@@ -20,6 +21,7 @@ function App() {
 
   return (
     <div className="min-h-screen bg-primary p-6 flex justify-center items-center">
+    <Posts />
       <div className="w-full max-w-lg">
         <h1 className="text-2xl font-bold text-darkAccent mb-4 text-center">Comentarios</h1>
         
@@ -59,3 +61,4 @@ function App() {
 }
 
 export default App;
+

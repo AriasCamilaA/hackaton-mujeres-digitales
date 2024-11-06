@@ -1,4 +1,4 @@
-import Sidebar from './Sidebar';
+import Sidebar from "./Sidebar";
 import NavbarComponent from './Navbar';
 import { useGlobalContextHook } from '../hooks/useGlobalContext';
 import { useLocation, useNavigate } from 'react-router-dom';
@@ -27,15 +27,14 @@ const Layout = ({ children }) => {
 
     return (
         <div>
-            <NavbarComponent />
-            <div className='h-[90vh] flex w-screen'>
-                <Sidebar className="w-[10wh]"/>
-                <main className='w-[100%] overflow-auto p-4 ps-2'>
-                    {children}
-                </main>
-            </div>
+      <NavbarComponent />
+      <div className="h-[90vh] flex flex-col md:flex-row w-screen">
+        <Sidebar className="w-full md:w-[15rem] md:h-full" />
+        <main className="w-full p-4 overflow-auto ps-2">{children}</main>
+      </div>
         </div>
     );
 }
 
 export default Layout;
+

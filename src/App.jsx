@@ -6,6 +6,7 @@ import Users from './pages/Users';
 import Todos from './pages/Todos';
 import Profile from './pages/Profile';
 import Layout from './layout/Layout';
+import FooterComponent from './layout/Footer';
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
             <Route path="/profile" element={<Profile />} />
           </Routes>
         </div>
+        <FooterComponent/>
       </Layout>
     </Router>
   );

@@ -23,6 +23,7 @@ const Posts = () => {
   const { posts, loading: postsLoading } = usePosts();
   const { users, loading: usersLoading } = useUsers();
   const { comments, loading: commentsLoading } = useComments();
+  const [expandedPostId, setExpandedPostId] = useState(null);
 
   const [selectedPost, setSelectedPost] = useState(null);
   const [selectedUser, setSelectedUser] = useState(null);
@@ -47,40 +48,58 @@ const Posts = () => {
     onOpen();
   };
 
-  return (
-    <div className="flex flex-wrap gap-4 justify-center items-center">
-      {posts.map((post) => {
-        const user = getUserById(post.userId);
-        const postComments = getCommentsByPostId(post.id);
+  const toggleExpandPost = (postId) => {
+    setExpandedPostId(expandedPostId === postId ? null : postId);
+  };
 
-        return (
-          <Card key={post.id} className="w-[20em] h-[20em]">
-            <CardHeader>
-              <Avatar text={user?.name[0]} size="md" color="primary" />
-              <div style={{ marginLeft: "10px" }}>
-                <p>{user?.name}</p>
-                <p style={{ color: "gray", fontSize: "14px" }}>{user?.email}</p>
-              </div>
-            </CardHeader>
-            <CardBody>
-              <p style={{ fontWeight: "bold" }}>{post.title}</p>
-              <p>{post.body}</p>
-            </CardBody>
-            <CardFooter className="flex justify-end">
-              <Link
-                onClick={() => handleCommentClick(post)}
-                style={{
-                  cursor: "pointer",
-                  color: "#0072F5",
-                  fontWeight: "bold",
-                }}
-              >
-                See {postComments.length} comments
-              </Link>
-            </CardFooter>
-          </Card>
-        );
-      })}
+  return (
+    <div className="container p-4 mx-auto">
+      <h1 className="mb-6 text-3xl font-bold text-center">Posts</h1>
+      <div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
+        {posts.map((post) => {
+          const user = getUserById(post.userId);
+          const postComments = getCommentsByPostId(post.id);
+
+          return (
+            <Card
+              key={post.id}
+              className={`relative p-6 shadow-lg rounded-lg transition-all duration-300 ${
+                expandedPostId === post.id ? 'h-auto' : 'h-30'
+              }`}
+              onMouseEnter={() => toggleExpandPost(post.id)}
+              onMouseLeave={() => toggleExpandPost(post.id)}
+            >
+              <CardHeader>
+                <Avatar text={user?.name[0]} size="md" color="primary" />
+                <div style={{ marginLeft: "10px" }}>
+                  <p>{user?.name}</p>
+                  <p style={{ color: "gray", fontSize: "14px" }}>
+                    {user?.email}
+                  </p>
+                </div>
+              </CardHeader>
+              <CardBody>
+                <p style={{ fontWeight: "bold" }}>{post.title}</p>
+                {expandedPostId === post.id && (
+                  <p className="text-[#50858B] mt-2">{post.body}</p>
+                )}
+              </CardBody>
+              <CardFooter className="flex justify-end">
+                <Link
+                  onClick={() => handleCommentClick(post)}
+                  style={{
+                    cursor: "pointer",
+                    color: "#0072F5",
+                    fontWeight: "bold",
+                  }}
+                >
+                  See {postComments.length} comments
+                </Link>
+              </CardFooter>
+            </Card>
+          );
+        })}
+      </div>
 
       {selectedPost && (
         <Modal
@@ -96,7 +115,7 @@ const Posts = () => {
                 <ModalBody>
                   <Card key={selectedPost.id} className="shadow-none">
                     <CardBody className="flex flex-row">
-                      <div className="border-2 p-4 rounded-md">
+                      <div className="p-4 border-2 rounded-md">
                         <CardHeader>
                           <Avatar
                             text={selectedUser?.name[0]}
@@ -118,7 +137,10 @@ const Posts = () => {
                       <div className="h-[25em] overflow-auto border-2 p-4 rounded-md">
                         <p className="font-bold text-primary">Comments:</p>
                         {getCommentsByPostId(selectedPost.id).map((comment) => (
-                          <div key={comment.id} className="mb-2 border-2 p-2 rounded-md gap-4">
+                          <div
+                            key={comment.id}
+                            className="gap-4 p-2 mb-2 border-2 rounded-md"
+                          >
                             <p className="text-customPurple-dark2">
                               By {comment.email}
                             </p>

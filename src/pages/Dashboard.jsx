@@ -27,13 +27,13 @@ const Dashboard = () => {
 
   return (
     <>
-      <h1 className='text-center text-customPurple text-xl font-bold mb-4'>Dashboard</h1>
+      <h1 className='text-center text-customBlue text-xl font-bold mb-4'>Dashboard</h1>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
         {dataSources.map(({ title, data, loading }) => {
           const [isOpen, setIsOpen] = useState(false);
 
           return (
-            <Card key={title} className="p-4 border border-primary-light text-customPurple-dark2 h-fit">
+            <Card key={title} className="p-4 border border-primary-light text-customBlue-dark2 h-fit">
               <div className='flex justify-between'>
                 <p className="text-lg font-semibold">{title}</p>
                 <p className="text-md">Total: {loading ? 'Loading...' : data.length}</p>

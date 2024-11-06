@@ -8,7 +8,7 @@ export default function NavbarComponent() {
         <p className="font-bold text-inherit">infiinicode</p>
       </div>
       <div>
-        <div className="flex items-center justify-center px-4 py-1 rounded-full cursor-pointer lg:flex hover:bg-customPurple-light1">
+        <div className="flex justify-center items-center lg:flex hover:bg-customBlue-light1 px-4 py-1 rounded-full cursor-pointer">
             <h5 className="me-4">
                 @usuario
             </h5>

@@ -67,7 +67,7 @@ export default function UserTable() {
     if (selectedUser) {
       editUser(selectedUser.id, { ...data });
     } else {
-      addUser({ ...data });
+      addUser({ ...data, active: true });
     }
     onClose();
   };
@@ -208,6 +208,10 @@ export default function UserTable() {
                   startContent={<i className="text-customBlue pe-2 border-e-2 fas fa-envelope" />}
                   {...register("email", {
                     required: "Email is required.",
+                    pattern: {
+                      value: /^[^\s@]+@[^\s@]+\.[^\s@]+$/,
+                      message: "Invalid email address.",
+                    },
                   })}
                   isInvalid={isSubmitted && !!errors.email}
                   errorMessage={errors.email?.message}

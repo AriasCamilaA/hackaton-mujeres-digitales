@@ -9,10 +9,10 @@ export default function FooterComponent() {
           <p className="font-bold text-inherit">infiinicode</p>
         </div>
         <div className="flex justify-center items-center">
-          <Link href="#" className="px-4 py-1 text-lg hover:text-customPurple-light1">
+          <Link href="#" className="px-4 py-1 text-lg hover:text-customBlue-light1">
             Privacy Policy
           </Link>
-          <Link href="#" className="px-4 py-1 text-lg hover:text-customPurple-light1">
+          <Link href="#" className="px-4 py-1 text-lg hover:text-customBlue-light1">
             Terms of Service
           </Link>
         </div>

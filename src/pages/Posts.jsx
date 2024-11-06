@@ -119,7 +119,7 @@ const Posts = () => {
                         <p className="font-bold text-primary">Comments:</p>
                         {getCommentsByPostId(selectedPost.id).map((comment) => (
                           <div key={comment.id} className="mb-2 border-2 p-2 rounded-md gap-4">
-                            <p className="text-customPurple-dark2">
+                            <p className="text-customBlue-dark2">
                               By {comment.email}
                             </p>
                             <p>{comment.body}</p>

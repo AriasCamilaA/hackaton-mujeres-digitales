@@ -14,6 +14,7 @@ import { useDisclosure } from "@nextui-org/react";
 import usePosts from "../hooks/usePosts";
 import useUsers from "../hooks/useUsers";
 import useComments from "../hooks/useComments";
+import { useState } from "react";
 
 const Posts = () => {
   const { posts, loading: postsLoading } = usePosts();

@@ -10,24 +10,24 @@ export default function FooterComponent() {
         </div>
 
         <div className="flex justify-center items-center mb-4 space-x-6">
-          <Link href="#" className="px-4 py-1 text-lg hover:text-customBlue-light1">
+          <Link href="#" className="px-4 py-1 text-base text-black hover:text-customBlue">
             Privacy Policy
           </Link>
-          <Link href="#" className="px-4 py-1 text-lg hover:text-customBlue-light1">
+          <Link href="#" className="px-4 py-1 text-base text-black hover:text-customBlue">
             Terms of Service
           </Link>
-          <Link href="https://facebook.com/infinicode" target="_blank" className="text-sm sm:text-base hover:text-customPurple-light1">
+          <Link href="https://facebook.com/infinicode" target="_blank" className="text-base text-black hover:text-customBlue">
             Facebook
           </Link>
         </div>
 
         <div className="flex flex-col sm:flex-row justify-center space-y-4 sm:space-y-0 sm:space-x-6">
-          <Link href="mailto:infinicodecompany@gmail.com" className="text-sm sm:text-base hover:text-customPurple-light1">
+          <Link href="mailto:infinicodecompany@gmail.com" className="text-base text-black hover:text-customBlue">
             infinicodecompany@gmail.com
           </Link>
         </div>
 
-        <p className="text-xs sm:text-sm text-gray-500 mt-4">© 2024 Infinicode. All Rights Reserved.</p>
+        <p className="text-base mt-4">© 2024 Infinicode. All Rights Reserved.</p>
       </div>
     </footer>
   );

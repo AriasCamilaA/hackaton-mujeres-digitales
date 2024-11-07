@@ -6,6 +6,7 @@ import usePhotos from '../hooks/usePhotos';
 import usePosts from '../hooks/usePosts';
 import useTodos from '../hooks/useTodos';
 import useUsers from '../hooks/useUsers';
+import { useState } from 'react';
 
 const Dashboard = () => {
   const { albums, loading: albumsLoading } = useAlbums();

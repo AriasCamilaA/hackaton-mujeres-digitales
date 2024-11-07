@@ -1,26 +1,33 @@
-import { Link, Button } from "@nextui-org/react";
+import { Link } from "@nextui-org/react";
 
 export default function FooterComponent() {
   return (
-    <footer className="bg-primary text-white w-screen px-4 py-2 h-[10vh]">
-      <div className="flex justify-between items-center">
-        <div className="flex justify-center items-center">
-          <img src="/logo.webp" className="w-10 h-10 rounded-full me-4" />
-          <p className="font-bold text-inherit">infiinicode</p>
+    <footer className="bg-white text-black w-full px-4 py-6">
+      <div className="max-w-screen-xl mx-auto text-center">
+        <div className="mb-4">
+          <img src="/logo1.png" className="w-16 h-16 rounded-full mx-auto" alt="Infinicode Logo" />
+          <p className="font-bold text-xl mt-2">Infinicode</p>
         </div>
-        <div className="flex justify-center items-center">
+
+        <div className="flex justify-center items-center mb-4 space-x-6">
           <Link href="#" className="px-4 py-1 text-lg hover:text-customBlue-light1">
             Privacy Policy
           </Link>
           <Link href="#" className="px-4 py-1 text-lg hover:text-customBlue-light1">
             Terms of Service
           </Link>
+          <Link href="https://facebook.com/infinicode" target="_blank" className="text-sm sm:text-base hover:text-customPurple-light1">
+            Facebook
+          </Link>
         </div>
-        <div className="flex justify-center items-center">
-          <Button auto flat color="gradient" className="px-4 py-1 rounded-full">
-            Contact Us
-          </Button>
+
+        <div className="flex flex-col sm:flex-row justify-center space-y-4 sm:space-y-0 sm:space-x-6">
+          <Link href="mailto:infinicodecompany@gmail.com" className="text-sm sm:text-base hover:text-customPurple-light1">
+            infinicodecompany@gmail.com
+          </Link>
         </div>
+
+        <p className="text-xs sm:text-sm text-gray-500 mt-4">© 2024 Infinicode. All Rights Reserved.</p>
       </div>
     </footer>
   );

@@ -111,7 +111,7 @@ const Posts = () => {
               <>
                 <ModalBody>
                   <Card key={selectedPost.id} className="shadow-none">
-                    <CardBody className="flex flex-row">
+                    <CardBody className="flex flex-col md:flex-row">
                       <div className="p-4 border-2 rounded-md">
                         <CardHeader>
                           <Avatar

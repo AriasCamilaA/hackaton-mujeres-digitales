@@ -9,7 +9,7 @@ export default function FooterComponent() {
           <p className="font-bold text-xl mt-2">Infinicode</p>
         </div>
 
-        <div className="flex justify-center items-center mb-4 space-x-6">
+        <div className="flex flex-col md:flex-row justify-center items-center mb-4">
           <Link href="#" className="px-4 py-1 text-base text-black hover:text-customBlue">
             Privacy Policy
           </Link>
@@ -21,7 +21,7 @@ export default function FooterComponent() {
           </Link>
         </div>
 
-        <div className="flex flex-col sm:flex-row justify-center space-y-4 sm:space-y-0 sm:space-x-6">
+        <div className="flex flex-col sm:flex-row justify-center space-y-4 sm:space-y-0 sm:space-x-6 items-center">
           <Link href="mailto:infinicodecompany@gmail.com" className="text-base text-black hover:text-customBlue">
             infinicodecompany@gmail.com
           </Link>

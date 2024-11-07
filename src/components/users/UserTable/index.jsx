@@ -90,8 +90,8 @@ export default function UserTable() {
 
   return (
     <div className="p-6 space-y-6">
-      <div className="flex justify-between items-center gap-4">
-        <h3 className="text-2xl font-bold">Users</h3>
+      <div className="flex items-center justify-between gap-4">
+        <h3 className="mb-4 text-3xl font-bold text-center text-customBlue">Users</h3>
         <div className="flex gap-4">
           <Input
             placeholder="Search users..."
@@ -132,7 +132,7 @@ export default function UserTable() {
                 </Chip>
               </TableCell>
               <TableCell className="text-center">
-                <div className="flex gap-2 items-center justify-center">
+                <div className="flex items-center justify-center gap-2">
                   <Button
                     isIconOnly
                     color="primary"
@@ -171,7 +171,7 @@ export default function UserTable() {
         <ModalContent className="w-full max-w-4xl">
           <ModalHeader>{selectedUser ? 'Edit User' : 'Add User'}</ModalHeader>
           <ModalBody>
-            <form onSubmit={handleSubmit(onSubmit)} className="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <form onSubmit={handleSubmit(onSubmit)} className="grid grid-cols-1 gap-4 md:grid-cols-2">
               <div>
                 <Input
                   label="Name"

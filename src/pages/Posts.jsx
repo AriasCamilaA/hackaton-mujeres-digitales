@@ -53,8 +53,8 @@ const Posts = () => {
   };
 
   return (
-    <div className="container p-4 mx-auto">
-      <h1 className="mb-6 text-3xl font-bold text-center">Posts</h1>
+    <div className="flex flex-wrap items-center justify-center gap-4">
+      <h1 className="mb-4 text-3xl font-bold text-center text-customBlue">Posts</h1>
       <div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
         {posts.map((post) => {
           const user = getUserById(post.userId);

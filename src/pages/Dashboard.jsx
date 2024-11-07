@@ -1,4 +1,3 @@
-import React, { useState } from 'react';
 import { Card } from '@nextui-org/react';
 import { Accordion, AccordionItem } from '@nextui-org/react';
 import useAlbums from '../hooks/useAlbums';

@@ -1,4 +1,3 @@
-import React, { useState } from "react";
 import {
   Card,
   Avatar,
@@ -6,12 +5,9 @@ import {
   CardHeader,
   CardBody,
   Modal,
-  Button,
   Link,
   ModalContent,
-  ModalHeader,
   ModalBody,
-  ModalFooter,
   CardFooter,
 } from "@nextui-org/react";
 import { useDisclosure } from "@nextui-org/react";

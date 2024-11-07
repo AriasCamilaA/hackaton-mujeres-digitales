@@ -27,7 +27,7 @@ const Login = () => {
         <div className="flex items-center justify-center min-h-screen bg-primary">
             <div className="bg-white p-8 rounded shadow-lg w-full max-w-sm flex flex-col items-center">
                 <div className='flex items-center border-b-1 w-full pb-4 mb- justify-center'>
-                    <img src="/logo.webp" alt="logo" width={50} height={50} />
+                    <img src="/logo1.png" alt="logo" width={50} height={50} />
                     <h1 className="text-2xl font-bold text-center ms-2">Infiinicode</h1>
                 </div>
                 <h2 className="text-2xl font-bold mb-6 text-center">Login</h2>

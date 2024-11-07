@@ -1,4 +1,3 @@
-import React, { useState } from 'react';
 import { Card } from '@nextui-org/react';
 import { Accordion, AccordionItem } from '@nextui-org/react';
 import useAlbums from '../hooks/useAlbums';
@@ -26,9 +25,9 @@ const Dashboard = () => {
   ];
 
   return (
-    <>
-      <h1 className='text-center text-customBlue text-xl font-bold mb-4'>Dashboard</h1>
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+    <div>
+      <h1 className='mb-4 text-3xl font-bold text-center text-customBlue'>Dashboard</h1>
+      <div className="grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3">
         {dataSources.map(({ title, data, loading }) => {
           const [isOpen, setIsOpen] = useState(false);
 
@@ -63,7 +62,7 @@ const Dashboard = () => {
           );
         })}
       </div>
-    </>
+    </div>
   );
 };
 
